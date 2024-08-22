@@ -1,0 +1,26 @@
+.titulo_1 {
+	       align: left;
+	       font-size: 50px;
+	       font-style: oblique;
+	       font-family:'Lucida Sans Unicode';
+	       color:rgb(190, 121, 255);
+}
+
+.titulo_2 {
+           align: left;
+		   font-weight:bolder;
+           font-family:'Lucida Sans Unicode';
+           color: rgb(255, 255, 255);
+           margin-left: 10px;
+}
+
+.imagens {
+		  align: left;
+		  display: flexbox;
+}
+
+.imagens img {
+	          height: 250px;
+			  width: 250px;
+		      padding: 10px;			  
+}
