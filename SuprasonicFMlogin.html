@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suprasonic.FM</title>
+    <style>
+.titulo_1 {
+	       text-align: center;
+	       font-size: 50px;
+	       font-style: oblique;
+	       font-family:'Lucida Sans Unicode';
+	       color:rgb(255, 255, 255);
+}
+
+.titulo_2 {
+	       text-align: center;
+           margin-top: 40px;
+           font-size: 45px;
+		   font-weight: bolder;
+           font-family:'Lucida Sans Unicode';
+           color: white;
+}
+
+.cadastro {
+           width: 500px;
+           border-radius: 30px;
+           border: solid white 5px;
+           background-image: linear-gradient(to right, rgb(79, 23, 117), rgb(133, 48, 212), rgb(208, 126, 255));
+           text-align: center;
+           display: block;
+           margin: 0 auto;
+}
+
+label {
+       font-size: 17px;
+       font-family: cursive;
+       font-style: italic;
+       font-weight: bolder;
+       color: white;
+}
+
+input {
+       margin: 0.6rem;
+       margin-top: 25px;
+       border-radius: 30px;
+       border: solid white 3px;
+       cursor: pointer;
+       outline: none;
+}
+
+.button_cadastro {
+                  margin: 25px;
+                  font-size: 14px;
+                  font-family: cursive;
+                  font-weight: bolder;
+                  border-radius: 30px;
+                  border: solid white 3px;
+                  background-color: rgb(142, 59, 158);
+                  color: white;
+                  width: 85px;
+                  height: 30px;
+
+}
+
+.esqueci_senha {
+                font-size: 14px;
+                font-family: cursive;
+                font-style: italic;
+                font-weight: bolder;
+                color: white;
+}
+
+.cadastre-se {
+              font-size: 16px;
+              font-family: cursive;
+              font-style: italic;
+              font-weight: bolder;
+              color: white;
+}
+
+.titulo_3 {
+	       text-align: left;
+		   font-size: 20px;
+	       font-weight: bolder;
+	       font-family:'Trebuchet MS';
+	       color: white;
+		   margin-left: 10px;
+}
+
+.icons {
+		display: flexbox;
+}
+
+.icons img {
+			width: 30px;
+			margin-left: 10px;	
+}
+
+.titulo_4 {
+           font-size: 14px;
+		   font-family:'Arial Narrow';
+		   font-weight: bold;
+}
+
+    </style>
+</head>
+<body style="background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))">
+    <h1 class="titulo_1">Suprasonic.FM</h1>
+    <hr>
+    <br>
+    <h1 class="titulo_2">Login</h1>
+    <br>
+    <div class="cadastro">
+        <form action="" method="post">
+            <input type="email" id="email" name="cadastro" placeholder="Digite seu e-mail" required name="email">
+            <br>
+            <input type="password" id="senha" name="cadastro" placeholder="Digite sua senha" required name="senha">
+            <br>
+            <input type="checkbox" id="sim" name="cadastro" value="sim" required name="sim">
+            <label for="sim">Lembrar minha senha</label>
+            <br><br><br>
+            <a href="SuprasonicFMlogado.html">
+                <input type="button" class="button_cadastro" id="cadastrar" name="cadastro" value="Login">
+            </a>
+            <br>
+            <a href="" class="esqueci_senha">Esqueci minha senha</a>
+            <br><br>
+            <a href="SuprasonicFMcadastro.html" class="cadastre-se">Cadastre-se</a>
+            <br><br>
+        </form>
+    </div>
+    <br><br><br>
+    <hr>
+    <br><br>
+    <div class="titulo_3">
+        <p>Torne-se Premium</p>
+        <p>Sobre nós</p>
+        <p>Fale Conosco</p>
+        <p>Outros projetos</p>   
+    </div>
+    <br><br>
+    <div class="icons" align="center">
+        <img src="https://cdn-icons-png.flaticon.com/128/733/733603.png">
+        <img src="https://cdn-icons-png.flaticon.com/128/3938/3938052.png">
+        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111363.png">
+        <img src="https://cdn-icons-png.flaticon.com/128/6244/6244710.png">
+    </div>
+    <div class="titulo_4" align="center">
+        <p>© Suprasonic.FM</p>
+        <p>v2024.12.01</p>
+    </div>
+</body>
+</html>
