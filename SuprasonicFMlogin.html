@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suprasonic.FM</title>
     <style>
+.topo_alinhado {
+                display: flex;
+                align-items: center;
+}
+
+.icone_suprasonic {
+                   width: 80px;
+                   margin-left: 683px;
+}
+
 .titulo_1 {
 	       text-align: center;
 	       font-size: 50px;
@@ -64,11 +74,12 @@ input {
 }
 
 .esqueci_senha {
-                font-size: 14px;
+                font-size: 16px;
                 font-family: cursive;
                 font-style: italic;
                 font-weight: bolder;
                 color: white;
+                text-decoration: none;
 }
 
 .cadastre-se {
@@ -77,6 +88,7 @@ input {
               font-style: italic;
               font-weight: bolder;
               color: white;
+              text-decoration: none;
 }
 
 .titulo_3 {
@@ -106,18 +118,21 @@ input {
     </style>
 </head>
 <body style="background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))">
-    <h1 class="titulo_1">Suprasonic.FM</h1>
+    <div class="topo_alinhado">
+       <img class="icone_suprasonic" src="https://i.imgur.com/8MkSv21.png">
+       <h1 class="titulo_1">Suprasonic.FM</h1>
+    </div>
     <hr>
     <br>
     <h1 class="titulo_2">Login</h1>
     <br>
     <div class="cadastro">
         <form action="" method="post">
-            <input type="email" id="email" name="cadastro" placeholder="Digite seu e-mail" required name="email">
+            <input type="email" id="email" name="cadastro" placeholder="Digite seu e-mail" required name="/email">
             <br>
-            <input type="password" id="senha" name="cadastro" placeholder="Digite sua senha" required name="senha">
+            <input type="password" id="senha" name="cadastro" placeholder="Digite sua senha" required name="/senha">
             <br>
-            <input type="checkbox" id="sim" name="cadastro" value="sim" required name="sim">
+            <input type="checkbox" id="sim" name="cadastro" value="sim" required name="/sim">
             <label for="sim">Lembrar minha senha</label>
             <br><br><br>
             <a href="SuprasonicFMlogado.html">
