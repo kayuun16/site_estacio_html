@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suprasonic.FM</title>
     <style>
+body {
+      background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))
+}
+
 .topo_alinhado {
                 display: flex;
                 align-items: center;
@@ -21,6 +25,7 @@
 	       font-style: oblique;
 	       font-family:'Lucida Sans Unicode';
 	       color:rgb(255, 255, 255);
+           margin-left: 10px;
 }
 
 .titulo_2 {
@@ -70,6 +75,7 @@ input {
                   color: white;
                   width: 85px;
                   height: 30px;
+                  
 
 }
 
@@ -106,7 +112,13 @@ input {
 
 .icons img {
 			width: 30px;
-			margin-left: 10px;	
+			margin-left: 10px;
+            cursor: pointer;
+            transition: 0.3s;	
+}
+
+.icons img:hover {
+                  transform: scale(1.2);
 }
 
 .titulo_4 {
@@ -117,7 +129,7 @@ input {
 
     </style>
 </head>
-<body style="background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))">
+<body>
     <div class="topo_alinhado">
        <img class="icone_suprasonic" src="https://i.imgur.com/8MkSv21.png">
        <h1 class="titulo_1">Suprasonic.FM</h1>
