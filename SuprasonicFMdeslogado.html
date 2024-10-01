@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suprasonic.FM</title>   
     <style>
+body {
+      background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))
+}
+
 .topo_alinhado {
                 display: flex;
                 align-items: center;
@@ -33,6 +37,11 @@
            margin-left: 10px;
            font-weight: bolder;
            text-decoration: none;
+           transition: 0.3s;
+}
+
+.login:hover {
+              transform: scale(1.2);
 }
 
 .titulo_2 {
@@ -51,7 +60,12 @@
 	          height: 250px;
 			  width: 250px;
 		      border: 5px solid black;
-			  margin-left: 10px;
+			  margin-left: 15px;
+              transition: 0.3s;
+}
+
+.imagens img:hover {
+                    transform: scale(1.1);
 }
 
 .titulo_3 {
@@ -69,7 +83,13 @@
 
 .icons img {
 			width: 30px;
-			margin-left: 10px;	
+			margin-left: 10px;
+            cursor: pointer;
+            transition: 0.3s;	
+}
+
+.icons img:hover {
+                  transform: scale(1.2);
 }
 
 .titulo_4 {
@@ -79,7 +99,7 @@
 }
     </style>
 </head>
-<body style="background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))">
+<body>
     <div class="topo_alinhado">
        <a href="SuprasonicFMlogin.html" class="login">Login</a>
        <img class="icone_suprasonic" src="https://i.imgur.com/8MkSv21.png"> 
