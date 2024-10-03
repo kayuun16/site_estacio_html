@@ -3,198 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suprasonic.FM</title>
+    <title>Suprasonic.FM - Login</title>
     <style>
-body {
-      background-image: linear-gradient(to right, rgb(98, 0, 155), rgb(191, 80, 255), rgb(247, 154, 255))
-}
 
-.topo_alinhado {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                align-content: center;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.icone_suprasonic {
-                   width: 80px;
-}
+        body {
+            background-color: rgb(237, 176, 255);
+            overflow-x: hidden;
+        }
+    
+        body::-webkit-scrollbar {
+            width: 12px;  
+        }
+    
+        body::-webkit-scrollbar-track {
+            background-color: rgb(43, 43, 43);
+        }
+    
+        body::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: rgb(237, 176, 255);
+            border: none;
+        }
+    
+        .header_topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 150px;
+            background-color: rgb(43, 43, 43);
+        }
+    
+        .logo_suprasonic {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 50px;
+        }
+    
+        .logo_suprasonic img {
+            width: 70px;
+        }
+    
+        .logo_suprasonic a {
+            font-size: 40px;
+            font-family: 'Lucida Sans Unicode';
+            font-style: italic;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+            text-decoration: none;
+        }
 
-.titulo_1 {
-	       text-align: center;
-	       font-size: 50px;
-	       font-style: oblique;
-	       font-family:'Lucida Sans Unicode';
-	       color:rgb(255, 255, 255);
-           margin-left: 10px;
-}
+        .premium {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px 50px;
+        }
 
-.titulo_2 {
-	       text-align: center;
-           margin-top: 40px;
-           font-size: 45px;
-		   font-weight: bolder;
-           font-family:'Lucida Sans Unicode';
-           color: white;
-}
-
-.cadastro {
-           width: 500px;
-           border-radius: 30px;
-           border: solid white 5px;
-           background-image: linear-gradient(to right, rgb(79, 23, 117), rgb(133, 48, 212), rgb(208, 126, 255));
-           text-align: center;
-           display: block;
-           margin: 0 auto;
-}
-
-.cadastro a {
-             font-size: 16px;
-             font-family: cursive;
-             font-style: italic;
-             font-weight: bolder;
-             color: white;
-             text-decoration: none;
-}
-
-label {
-       font-size: 17px;
-       font-family: cursive;
-       font-style: italic;
-       font-weight: bolder;
-       color: white;
-}
-
-input {
-       margin: 0.6rem;
-       margin-top: 25px;
-       border-radius: 30px;
-       border: solid white 3px;
-       cursor: pointer;
-       outline: none;
-}
-
-.button_cadastro {
-                  margin: 25px;
-                  font-size: 14px;
-                  font-family: cursive;
-                  font-weight: bolder;
-                  border-radius: 30px;
-                  border: solid white 3px;
-                  background-color: rgb(142, 59, 158);
-                  color: white;
-                  width: 85px;
-                  height: 30px;
-}
-
-.div_cadastro a{
-                display: block;
-                margin: 0 auto;
-                justify-content: center;
-                align-content: center;
-                width: fit-content;
-                transition: 0.3s;
-}
-
-.div_cadastro a:hover {
-                     transform: scale(1.1);
-}
-
-.titulo_3 {
-	       text-align: left;
-		   font-size: 20px;
-	       font-weight: bolder;
-	       font-family:'Trebuchet MS';
-	       color: white;
-		   margin-left: 10px;
-           width: fit-content;
-}
-
-.titulo_3 p {
-             margin-top: 30px;
-             transition: 0.3s;
-             cursor: pointer;
-}
-
-.titulo_3 p:hover {
-                   transform: scale(1.1);
-}
-
-.icons {
-		display: flex;
-        justify-content: center;
-        align-content: center;
-}
-
-.icons img {
-			width: 30px;
-			margin-left: 10px;
+        .premium span { 
+            font-size: 18px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+            text-decoration: none;
             cursor: pointer;
-            transition: 0.3s;	
-}
+            transition: 0.3s;
+        }
+    
+        .premium span:hover {
+            transform: scale(1.1);
+        }
 
-.icons img:hover {
-                  transform: scale(1.2);
-}
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.titulo_4 {
-           display: flexbox;
-           font-size: 14px;
-		   font-family:'Arial Narrow';
-		   font-weight: bold;
-}
+        .container_login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+            background-color: rgb(43, 43, 43);
+            border-radius: 16px;
+            padding: 40px;
+            gap: 40px;
+        }
 
+        .title {
+            font-size: 50px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            color: rgb(237, 176, 255);
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        .login_area {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .login_area span {
+            font-size: 18px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+        }
+
+        .login {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0 15px;
+            background-color: rgb(237, 176, 255);
+            border-radius: 8px;
+        }
+
+        .login input {
+            width: 250px;
+            height: 35px;
+            border: none;
+            background-color: transparent;
+            outline: none;
+            flex: 1;
+        }
+
+        .lembrar_senha {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .lembrar_senha label {
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+        }
+        
+        .button_entrar {
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            color: rgb(237, 176, 255);
+            border: none;
+            outline: none;
+            font-size: 24px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+    
+        .button_entrar:hover {
+            transform: scale(1.15);
+        }
+
+        .container_login a {
+            text-decoration: none;
+        }
+
+        .esqueci_senha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+            color: white;
+            font-weight: bolder;
+            cursor: pointer;
+            margin-top: 30px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .esqueci_senha:hover {
+            transform: scale(1.1);
+        }
+
+        .registrar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .registrar span {
+            font-size: 12px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .registrar a {
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            color: rgb(237, 176, 255);
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .registrar a:hover {
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <div class="topo_alinhado">
-       <img class="icone_suprasonic" src="https://i.imgur.com/8MkSv21.png">
-       <h1 class="titulo_1">Suprasonic.FM</h1>
-    </div>
-    <hr>
-    <br>
-    <h1 class="titulo_2">Login</h1>
-    <br>
-    <div class="cadastro">
-        <form action="" method="post">
-            <input type="email" id="email" name="cadastro" placeholder="Digite seu e-mail" required name="email/">
-            <br>
-            <input type="password" id="senha" name="cadastro" placeholder="Digite sua senha" required name="senha/">
-            <br>
-            <input type="checkbox" id="sim" name="cadastro" value="sim" required name="sim/">
-            <label for="sim">Lembrar minha senha</label>
-            <br><br><br>
-            <a href="SuprasonicFMlogado.html">
-                <input type="button" class="button_cadastro" id="cadastrar" name="cadastro" value="Login">
-            </a>
-            <br><br>
-            <div class="div_cadastro">
-               <a href="">Esqueci minha senha</a>
-               <br>
-               <a href="SuprasonicFMcadastro.html">Cadastre-se</a>
-            </div>
-            <br>
-        </form>
-    </div>
-    <br><br><br>
-    <hr>
-    <br><br>
-    <div class="titulo_3">
-        <p>Torne-se Premium</p>
-        <p>Sobre nós</p>
-        <p>Fale Conosco</p>
-        <p>Outros projetos</p>   
-    </div>
-    <br><br>
-    <div class="icons">
-        <img src="https://cdn-icons-png.flaticon.com/128/733/733603.png">
-        <img src="https://cdn-icons-png.flaticon.com/128/3938/3938052.png">
-        <img src="https://cdn-icons-png.flaticon.com/128/2111/2111363.png">
-        <img src="https://cdn-icons-png.flaticon.com/128/6244/6244710.png">
-    </div>
-    <div class="titulo_4" align="center">
-        <p>© Suprasonic.FM</p>
-        <p>v2024.12.01</p>
-    </div>
+    
+    <header class="header_topo">
+
+        <div class="logo_suprasonic">
+           <img src="https://64.media.tumblr.com/88e4c7eeb7b1a8e7f2b7c79027614670/aed3f0f6e9178024-05/s500x750/529d1f856cdcacebfa0a0f70e6517c5c10364f31.pnj"/>
+           <a href="SuprasonicFMlogin.html">Suprasonic.FM</a>
+        </div>
+
+        <nav class="premium">
+           <span>Torne-se Premium</span>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="container_login">
+
+           <h1 class="title">Login</h1>
+
+           <div class="login_area">
+              <span>E-mail</span>
+              <div class="login">
+                 <input type="email"/>
+              </div>
+
+              <span>Senha</span>
+              <div class="login">
+                 <input type="password">
+              </div>
+
+              <div class="lembrar_senha">
+                 <input type="checkbox"/>
+                 <label>Lembrar minha senha</label>
+              </div>
+
+           </div>
+
+           <a href="SuprasonicFMlogado.html">
+              <button class="button_entrar" type="submit">Entrar</button>
+           </a>
+
+           <span class="esqueci_senha">Esqueceu sua senha?</span>
+
+           <div class="registrar">
+              <span>Não possui uma conta?</span>
+              <a href="SuprasonicFMcadastro.html">Registre-se</a>
+           </div>
+
+        </div>
+
+    </main>
+
 </body>
 </html>
