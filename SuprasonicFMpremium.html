@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://64.media.tumblr.com/88e4c7eeb7b1a8e7f2b7c79027614670/aed3f0f6e9178024-05/s500x750/529d1f856cdcacebfa0a0f70e6517c5c10364f31.pnj"
+        type="image/x-icon">
+    <title>Suprasonic.FM - Premium</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(237, 176, 255);
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: rgb(43, 43, 43);
+        }
+
+        body::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: rgb(237, 176, 255);
+            border: none;
+        }
+
+        .header_topo {
+            display: flex;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 99;
+            justify-content: space-between;
+            align-items: center;
+            width: 100vw;
+            height: 150px;
+            background-color: rgb(43, 43, 43);
+        }
+
+        .logo_suprasonic {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 50px;
+        }
+
+        .logo_suprasonic img {
+            width: 70px;
+        }
+
+        .logo_suprasonic a {
+            font-size: 40px;
+            font-family: 'Lucida Sans Unicode';
+            font-style: italic;
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+            text-decoration: none;
+        }
+
+        .icones {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 50px;
+            padding: 20px 50px;
+        }
+
+        .icones a {
+            font-size: 18px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            letter-spacing: 2px;
+            color: rgb(237, 176, 255);
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .icones a:hover {
+            transform: scale(1.15);
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1400px 0 1200px 0;
+        }
+
+        .container_premium {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            border-radius: 12px;
+            background-color: rgb(43, 43, 43);
+            gap: 40px;
+            padding: 40px 50px;
+        }
+
+        .premium_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            gap: 30px;
+        }
+
+        .premium_title h1 {
+            font-size: 40px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            color: rgb(237, 176, 255);
+            letter-spacing: 2px;
+        }
+
+        .premium_title p {
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .container_planos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            gap: 80px;
+            margin-top: 80px;
+        }
+
+        .container_plano_individual, .container_plano_duo, .container_plano_familia {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            
+        }
+
+        .container_plano_individual_title, .container_plano_duo_title, .container_plano_familia_title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .container_plano_individual_title h1, .container_plano_duo_title h1, .container_plano_familia_title h1 {
+            font-size: 30px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bolder;
+            color: rgb(237, 176, 255);
+            letter-spacing: 2px;
+        }
+
+        .valor_por_mes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .um_mes,
+        .seis_meses,
+        .doze_meses {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .um_mes h1,
+        .seis_meses h1,
+        .doze_meses h1 {
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: 'Lucida Sans Unicode';
+            color: rgb(237, 176, 255);
+            letter-spacing: 2px;
+        }
+
+        .um_mes p, .seis_meses p, .doze_meses p {
+            font-size: 14px;
+            font-family: 'Lucida Sans Unicode';
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+        }
+
+        .linha{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 2px;
+            width: 100%;
+            background-color: rgb(237, 176, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header_topo">
+
+        <div class="logo_suprasonic">
+            <img
+                src="https://64.media.tumblr.com/88e4c7eeb7b1a8e7f2b7c79027614670/aed3f0f6e9178024-05/s500x750/529d1f856cdcacebfa0a0f70e6517c5c10364f31.pnj" />
+            <a href="SuprasonicFMpremium.html">Suprasonic.FM</a>
+        </div>
+
+        <nav class="icones">
+            <a href="SuprasonicFMlogin.html">Login</a>
+            <a href="SuprasonicFMcadastro.html">Registrar</a>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container_premium">
+            <div class="premium_title">
+                <h1>Suprasonic Premium</h1>
+                <p>Com o Suprasonic Premium, você pode ouvir suas músicas sem anúncio, onde e quando quiser, além de 30%
+                    de desconto na compra de qualquer álbum</p>
+            </div>
+
+            <div class="container_planos">
+                <div class="container_plano_individual">
+                    <div class="container_plano_individual_title">
+                        <h1>Plano Individual</h1>
+                    </div>
+
+                    <div class="valor_por_mes">
+                        <div class="um_mes">
+                            <h1>1 mês</h1>
+                            <p>R$ 18,00 p/ mês</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="seis_meses">
+                            <h1>6 meses</h1>
+                            <p>R$ 86,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="doze_meses">
+                            <h1>1 ano</h1>
+                            <p>R$ 160,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="container_plano_duo">
+                    <div class="container_plano_duo_title">
+                        <h1>Plano Duo</h1>
+                    </div>
+
+                    <div class="valor_por_mes">
+                        <div class="um_mes">
+                            <h1>1 mês</h1>
+                            <p>R$ 24,00 p/ mês</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="seis_meses">
+                            <h1>6 meses</h1>
+                            <p>R$ 120,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="doze_meses">
+                            <h1>1 ano</h1>
+                            <p>R$ 200,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="linha"></div>
+
+                <div class="container_plano_familia">
+                    <div class="container_plano_familia_title">
+                        <h1>Plano Família</h1>
+                    </div>
+
+                    <div class="valor_por_mes">
+                        <div class="um_mes">
+                            <h1>1 mês</h1>
+                            <p>R$ 32,00 p/ mês</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="seis_meses">
+                            <h1>6 meses</h1>
+                            <p>R$ 160,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                        <div class="doze_meses">
+                            <h1>1 ano</h1>
+                            <p>R$ 300,00</p>
+                            <p>Cancele quando quiser</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
